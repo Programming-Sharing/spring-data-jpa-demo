@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import com.programmingsharing.demo.entities.Employee;
 
-public class UserCustomizedRepositoryImpl implements UserCustomizedRepository{
+public class EmployeeCustomizedRepositoryImpl implements EmployeeCustomizedRepository{
 	
 	@PersistenceContext
 	private EntityManager entityManager;

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.programmingsharing.demo.entities.Employee;
 
-public interface UserCustomizedRepository {
+public interface EmployeeCustomizedRepository {
 	
 	List<Employee> getUserWithCustomQuery();
 

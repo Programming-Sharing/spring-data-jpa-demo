@@ -5,13 +5,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.programmingsharing.demo.repositories.UserRepository;
+import com.programmingsharing.demo.repositories.EmployeeRepository;
 
 @SpringBootApplication
 public class SpringDataJpaDemoApplication implements CommandLineRunner{
 
 	@Autowired
-	private UserRepository userRepository;
+	private EmployeeRepository userRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDataJpaDemoApplication.class, args);
