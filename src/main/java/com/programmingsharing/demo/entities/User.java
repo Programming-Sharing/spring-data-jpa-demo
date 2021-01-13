@@ -1,15 +1,14 @@
 package com.programmingsharing.demo.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 import com.programmingsharing.demo.entities.audit.AuditableEntity;
+
+import javax.persistence.*;
 
 @Entity
 public class User extends AuditableEntity{
 	@Id
-	private int id;
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Integer id;
 	
 	@Column(name = "first_name")
 	private String firstName;
@@ -17,11 +16,11 @@ public class User extends AuditableEntity{
 	@Column(name = "last_name")
 	private String lastName;
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

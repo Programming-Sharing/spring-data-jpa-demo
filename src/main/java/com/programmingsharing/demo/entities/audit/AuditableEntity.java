@@ -1,31 +1,35 @@
 package com.programmingsharing.demo.entities.audit;
 
-import java.sql.Date;
-
-import javax.persistence.Column;
-
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import javax.persistence.Column;
+import javax.persistence.EntityListeners;
+import javax.persistence.MappedSuperclass;
+import java.util.Date;
+
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
 public class AuditableEntity {
 	
 	@CreatedBy
-	@Column(name = "createdBy")
+	@Column(name = "CREATED_BY")
 	private String createdBy;
 	
 	@CreatedDate
-	@Column(name = "createdDate")
+	@Column(name = "CREATED_DATE")
 	private Date createdDate;
 	
 	@LastModifiedBy
-	@Column(name = "lastModifiedBy")
+	@Column(name = "LAST_MODIFIED_BY")
 	private String lastModifiedBy;
 	
 	
 	@LastModifiedDate
-	@Column(name = "lastModifiedDate")
+	@Column(name = "LAST_MODIFIED_DATE")
 	private Date lastModifiedDate;
 
 	protected String getCreatedBy() {
