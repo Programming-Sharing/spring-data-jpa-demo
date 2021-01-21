@@ -1,10 +1,10 @@
-drop table UserAuditable if exists;
+drop table User if exists;
 create table User (
 	id INT,
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
-	createdBy VARCHAR(50),
-	createdDate date,
-	lastModifiedBy VARCHAR(50),
-	lastModifiedDate date
+    CREATED_BY VARCHAR(50),
+    CREATED_DATE date,
+    LAST_MODIFIED_BY VARCHAR(50),
+    LAST_MODIFIED_DATE date
 );
