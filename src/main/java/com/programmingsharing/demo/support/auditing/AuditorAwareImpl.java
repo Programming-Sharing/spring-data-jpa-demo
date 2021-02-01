@@ -1,4 +1,4 @@
-package com.programmingsharing.demo.auditing;
+package com.programmingsharing.demo.support.auditing;
 
 import org.springframework.data.domain.AuditorAware;
 

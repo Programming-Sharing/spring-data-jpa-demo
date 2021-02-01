@@ -1,6 +1,6 @@
 package com.programmingsharing.demo.conf;
 
-import com.programmingsharing.demo.auditing.AuditorAwareImpl;
+import com.programmingsharing.demo.support.auditing.AuditorAwareImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
